@@ -126,3 +126,8 @@ alias neo='clear && neofetch --ascii /home/felsterr/Documents/asciitv.txt'
 vol(){
 	amixer -D pulse sset Master $@%
 }
+
+#increment speaker up 5 percent
+alias volup='amixer -D pulse sset Master 5%+'
+#increment speaker down 5 percent
+alias voldn='amixer -D pulse sset Master 5%-'
