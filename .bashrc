@@ -131,3 +131,16 @@ vol(){
 alias volup='amixer -D pulse sset Master 5%+'
 #increment speaker down 5 percent
 alias voldn='amixer -D pulse sset Master 5%-'
+#increment volume up by 5% n times - as of now, this doesn't work properly. I think I just don't really get how the range in the for loop works. Fix later.
+#volupn(){
+#	for i in {1..$@}
+#	do 
+#		amixer -D pulse sset Master 5%+
+#	done
+#}
+alias weatherel="curl -s wttr.in/east_lansing | head -n -2"
+
+#weather function - cities must be lowercase; 2 word cities must be separated by an underscore (e.g., east_lansing)
+weather(){
+		curl -s wttr.in/$@ | head -n -2
+}
